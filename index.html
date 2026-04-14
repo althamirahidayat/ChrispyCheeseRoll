@@ -9,18 +9,6 @@
 </head>
 <body>
 
-    <nav>
-        <div class="nav-container">
-            <div class="logo">CHEESE <span class="accent">ROLL.</span></div>
-            <div class="nav-links">
-                <a href="#about">ABOUT US</a>
-                <a href="#menu">MENU</a>
-                <a href="#testimoni">TESTIMONI</a>
-                <a href="#order" class="btn-order-nav">ORDER NOW</a>
-            </div>
-        </div>
-    </nav>
-
     <section class="hero">
         <div class="hero-content">
             <h1>Crispy <br><span class="accent">Cheese</span> Roll</h1>
@@ -164,18 +152,16 @@
 
     <script>
         function sendToWhatsapp() {
-            // Masukkan nomor WhatsApp kamu di sini (Gunakan kode negara, misal 62)
-            const nomorWA = "6281234567890"; 
+            // GANTI NOMOR DI BAWAH INI (Gunakan 62, jangan 0)
+            const nomorWA = "6288224693777"; 
 
             const nama = document.getElementById('nama').value;
             const kelas = document.getElementById('kelas').value;
             const paket = document.getElementById('paket').value;
             const catatan = document.getElementById('catatan').value || "-";
             
-            // Ambil Selai
             const selai = document.querySelector('input[name="selai"]:checked').value;
 
-            // Ambil Topping
             let topping = [];
             document.querySelectorAll('input[name="topping"]:checked').forEach((item) => {
                 topping.push(item.value);
@@ -183,12 +169,11 @@
             let listTopping = topping.length > 0 ? topping.join(", ") : "-";
 
             if(nama === "" || kelas === "") {
-                alert("Harap isi Nama dan Kelas ya!");
+                alert("Isi nama dan kelas dulu yaa!");
                 return;
             }
 
-            // Template Pesan
-            const pesan = `Halo kak, saya mau pesen Crispy Cheese Roll-nya!%0A%0A` +
+            const pesan = `Halo kak, saya mau pesen Crispy Cheese Roll!%0A%0A` +
                           `*Data Pemesan:*%0A` +
                           `- Nama: ${nama}%0A` +
                           `- Kelas: ${kelas}%0A%0A` +
@@ -197,7 +182,7 @@
                           `- Selai: ${selai}%0A` +
                           `- Tambahan Topping: ${listTopping}%0A` +
                           `- Catatan: ${catatan}%0A%0A` +
-                          `Ditunggu ya kak, terima kasih!`;
+                          `Ditunggu ya kak, makasih!`;
 
             window.open(`https://wa.me/${nomorWA}?text=${pesan}`, '_blank');
         }
