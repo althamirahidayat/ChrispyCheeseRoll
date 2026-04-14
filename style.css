@@ -1,0 +1,296 @@
+/* ROOT VARIABLES */
+:root {
+    --primary: #FF8C32;
+    --dark-brown: #4A2C2A;
+    --light-bg: #FDF6EC;
+    --white: #FFFFFF;
+    --text-muted: #777;
+}
+
+* { box-sizing: border-box; scroll-behavior: smooth; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-bg);
+    margin: 0;
+    color: var(--dark-brown);
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+    background: var(--white);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo { font-weight: 800; font-size: 24px; letter-spacing: 1px; }
+.accent { color: var(--primary); }
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-brown);
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 30px;
+    transition: 0.3s;
+}
+
+.btn-order-nav {
+    background: var(--dark-brown);
+    color: white !important;
+    padding: 10px 25px;
+    border-radius: 50px;
+}
+
+/* HERO */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--light-bg);
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 70px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    padding: 18px 40px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 8px 15px rgba(255, 140, 50, 0.3);
+    transition: 0.3s;
+}
+
+/* Container Utama */
+.about {
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    background-color: #fdf5e6; /* Warna krem sesuai screenshot */
+}
+
+.about-container {
+    max-width: 1100px;
+    width: 90%;
+    display: flex;
+    align-items: center; /* Membuat konten rata tengah secara vertikal */
+    gap: 60px; /* Jarak antara gambar dan teks */
+}
+
+/* Bagian Gambar */
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    border: 2px solid #5d4037; /* Sesuaikan dengan var(--dark-brown) */
+    box-shadow: 15px 15px 0px #d7ccc8; /* Sesuaikan dengan var(--primary) */
+    object-fit: cover;
+}
+
+/* Bagian Teks */
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #5d4037;
+}
+
+.about-text p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Responsif untuk HP (Gambar akan pindah ke atas teks) */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .about-text {
+        text-align: center;
+    }
+}
+/* MENU */
+.menu-section { padding: 80px 0; text-align: center; }
+.serif-title { font-family: 'Playfair Display', serif; font-size: 45px; margin-bottom: 10px; }
+.subtitle { color: var(--text-muted); margin-bottom: 50px; }
+
+.menu-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.menu-card {
+    background: var(--white);
+    width: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: left;
+    transition: 0.3s;
+}
+.menu-card:hover { transform: translateY(-10px); }
+.menu-card img { width: 100%; height: 250px; object-fit: cover; }
+.card-body { padding: 25px; }
+.card-footer { display: flex; justify-content: space-between; align-items: center; }
+.add-btn { background: #f0f0f0; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 22px; cursor: pointer; }
+
+/* ORDER SECTION */
+.order-section { padding: 100px 0; }
+.form-card {
+    max-width: 750px;
+    margin: 0 auto;
+    background: var(--dark-brown);
+    color: white;
+    padding: 60px;
+    border-radius: 40px;
+}
+
+.form-title { font-family: 'Playfair Display', serif; text-align: center; color: var(--primary); font-size: 38px; margin-bottom: 30px; }
+.form-subtitle { font-size: 12px; font-weight: bold; margin: 30px 0 15px; color: #eec; letter-spacing: 1px; }
+
+.input-row { display: flex; gap: 30px; }
+.input-group { flex: 1; margin-bottom: 20px; display: flex; flex-direction: column; }
+label { font-size: 11px; margin-bottom: 8px; font-weight: 600; }
+input, textarea {
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    background: #5D3A38;
+    color: white;
+    font-family: inherit;
+}
+
+.menu-inputs { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.qty-item { display: flex; justify-content: space-between; align-items: center; background: #5D3A38; padding: 15px; border-radius: 10px; }
+.qty-item input { width: 50px; text-align: center; padding: 5px; }
+
+.topping-grid { display: flex; gap: 20px; }
+.check-item { flex: 1; background: #5D3A38; padding: 15px; border-radius: 10px; text-align: center; cursor: pointer; font-size: 14px; }
+
+.btn-submit {
+    width: 100%;
+    padding: 20px;
+    margin-top: 40px;
+    background: var(--primary);
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* TESTIMONI */
+.testi-section { padding: 100px 0; background: var(--white); text-align: center; }
+.testi-grid { display: flex; justify-content: center; gap: 30px; margin-top: 50px; }
+.testi-card { background: var(--light-bg); padding: 40px; border-radius: 20px; width: 400px; border-left: 12px solid var(--primary); text-align: left; }
+.stars { color: gold; margin-top: 5px; }
+
+/* FOOTER */
+footer { background: var(--dark-brown); color: white; padding: 80px 0; text-align: center; }
+.footer-links { margin: 30px 0; }
+.footer-links a { color: white; margin: 0 20px; text-decoration: none; opacity: 0.8; }
+.copy { font-size: 12px; opacity: 0.4; margin-top: 40px; }
+
+/* Update & Tambahan Style */
+
+.full-input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    background: #5D3A38;
+    color: white;
+    font-family: inherit;
+    margin-bottom: 20px;
+}
+
+.radio-item, .check-item {
+    flex: 1;
+    background: #5D3A38;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.radio-item:hover, .check-item:hover {
+    background: #7a4d4a;
+}
+
+.topping-grid {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.add-btn-link {
+    text-decoration: none;
+    background: var(--primary);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Memperbaiki layout form di mobile */
+@media (max-width: 600px) {
+    .input-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .form-card {
+        padding: 30px 20px;
+    }
+    .topping-grid {
+        flex-direction: column;
+    }
+}

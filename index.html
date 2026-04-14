@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheese Roll - Cemilan Renyah</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">CHEESE <span class="accent">ROLL.</span></div>
+            <div class="nav-links">
+                <a href="#about">ABOUT US</a>
+                <a href="#menu">MENU</a>
+                <a href="#testimoni">TESTIMONI</a>
+                <a href="#order" class="btn-order-nav">ORDER NOW</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Crispy <br><span class="accent">Cheese</span> Roll</h1>
+            <p class="tagline">
+                "Jangan cuma nagih kabar dari dia... <br>
+                nagih rasa cheese roll lumpia dong"
+            </p>
+            <a href="#menu" class="btn-primary">LIHAT MENU SPESIAL</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="img/original.jpeg" alt="Cheese Roll Tray">
+            </div>
+            <div class="about-text">
+                <h2>Tentang Kami</h2>
+                <p>Crispy Cheese Roll adalah camilan istimewa yang memadukan renyahnya kulit lumpia dengan lumeran keju pilihan dan berbagai topping premium.</p>
+                <p>Dibuat fresh setiap hari khusus untuk teman sekolah! Nikmati sensasi kriuk yang bikin ketagihan di setiap jam istirahat.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <h2 class="serif-title">Varian Paket</h2>
+        <p class="subtitle">Pilih Kebahagiaanmu Hari Ini</p>
+        
+        <div class="menu-grid">
+            <div class="menu-card">
+                <img src="img/cokelat.jpeg" alt="Paket Hemat">
+                <div class="card-body">
+                    <h3>Paket Hemat (Isi 3)</h3>
+                    <div class="card-footer">
+                        <p class="price"><span class="accent">Rp 5.000</span></p>
+                        <a href="#order" class="add-btn-link">Pilih</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="img/matcha.jpeg" alt="Paket Kenyang">
+                <div class="card-body">
+                    <h3>Paket Kenyang (Isi 7)</h3>
+                    <div class="card-footer">
+                        <p class="price"><span class="accent">Rp 10.000</span></p>
+                        <a href="#order" class="add-btn-link">Pilih</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="order-section">
+        <div class="form-card">
+            <h2 class="form-title">Formulir Pesanan</h2>
+            <form id="whatsappForm">
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>NAMA LENGKAP</label>
+                        <input type="text" id="nama" required placeholder="Nama Anda">
+                    </div>
+                    <div class="input-group">
+                        <label>KELAS / LOKASI</label>
+                        <input type="text" id="kelas" required placeholder="Contoh: XI PPLG 1">
+                    </div>
+                </div>
+
+                <p class="form-subtitle">PILIH PAKET</p>
+                <select id="paket" class="full-input">
+                    <option value="Paket Hemat (5rb - isi 3)">Paket Hemat (Rp 5.000 - isi 3)</option>
+                    <option value="Paket Kenyang (10rb - isi 7)">Paket Kenyang (Rp 10.000 - isi 7)</option>
+                </select>
+
+                <p class="form-subtitle">PILIH SELAI (FREE)</p>
+                <div class="topping-grid">
+                    <label class="radio-item">
+                        <input type="radio" name="selai" value="Cokelat" checked> Cokelat
+                    </label>
+                    <label class="radio-item">
+                        <input type="radio" name="selai" value="Matcha"> Matcha
+                    </label>
+                    <label class="radio-item">
+                        <input type="radio" name="selai" value="Tanpa Selai"> Tanpa Selai
+                    </label>
+                </div>
+
+                <p class="form-subtitle">TAMBAHAN TOPPING (+ RP 1.000)</p>
+                <div class="topping-grid">
+                    <label class="check-item">
+                        <input type="checkbox" name="topping" value="Oreo"> + OREO
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox" name="topping" value="Milo"> + MILO
+                    </label>
+                </div>
+
+                <div class="input-group">
+                    <label>CATATAN TAMBAHAN (OPSIONAL)</label>
+                    <input type="text" id="catatan" placeholder="Contoh: Selainya banyakin ya kak">
+                </div>
+
+                <button type="button" onclick="sendToWhatsapp()" class="btn-submit">KIRIM PESANAN KE WHATSAPP</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="testimoni" class="testi-section">
+        <h2 class="serif-title">Happy Customers</h2>
+        <div class="testi-grid">
+            <div class="testi-card">
+                <div class="user-info">
+                    <div class="avatar"></div>
+                    <div>
+                        <h4>Yayaa</h4>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <p>"Crispy cheese roll nya enak banget!"</p>
+            </div>
+            <div class="testi-card">
+                <div class="user-info">
+                    <div class="avatar"></div>
+                    <div>
+                        <h4>Nayzilla</h4>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+                <p>"Kulit renyah dan isian keju lumer. Juara!"</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h2 class="logo">CHEESE <span class="accent">ROLL.</span></h2>
+            <p>Cemilan Renyah, Hati Pun Lumer</p>
+            <p class="copy">© 2026 Cheese Roll Lumpia. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function sendToWhatsapp() {
+            // Masukkan nomor WhatsApp kamu di sini (Gunakan kode negara, misal 62)
+            const nomorWA = "6281234567890"; 
+
+            const nama = document.getElementById('nama').value;
+            const kelas = document.getElementById('kelas').value;
+            const paket = document.getElementById('paket').value;
+            const catatan = document.getElementById('catatan').value || "-";
+            
+            // Ambil Selai
+            const selai = document.querySelector('input[name="selai"]:checked').value;
+
+            // Ambil Topping
+            let topping = [];
+            document.querySelectorAll('input[name="topping"]:checked').forEach((item) => {
+                topping.push(item.value);
+            });
+            let listTopping = topping.length > 0 ? topping.join(", ") : "-";
+
+            if(nama === "" || kelas === "") {
+                alert("Harap isi Nama dan Kelas ya!");
+                return;
+            }
+
+            // Template Pesan
+            const pesan = `Halo kak, saya mau pesen Crispy Cheese Roll-nya!%0A%0A` +
+                          `*Data Pemesan:*%0A` +
+                          `- Nama: ${nama}%0A` +
+                          `- Kelas: ${kelas}%0A%0A` +
+                          `*Detail Pesanan:*%0A` +
+                          `- Paket: ${paket}%0A` +
+                          `- Selai: ${selai}%0A` +
+                          `- Tambahan Topping: ${listTopping}%0A` +
+                          `- Catatan: ${catatan}%0A%0A` +
+                          `Ditunggu ya kak, terima kasih!`;
+
+            window.open(`https://wa.me/${nomorWA}?text=${pesan}`, '_blank');
+        }
+    </script>
+</body>
+</html>
